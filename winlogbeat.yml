@@ -127,7 +127,7 @@ setup.kibana:
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
   # The Logstash hosts
-  hosts: ["192.168.0.58:5044"]
+  hosts: ["Logstash 호스트 주소:5044"]
 
   # Optional SSL. By default is off.
   ssl.enabled: true
