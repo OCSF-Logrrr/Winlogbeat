@@ -21,7 +21,7 @@
      - `cat ca.crt`
    - 터미널에 표시된 `-----BEGIN CERTIFICATE-----`부터 `-----END CERTIFICATE-----`까지 전체를 복사합니다.
    - 윈도우의 메모장 등을 열어 복사한 내용을 붙여넣고, `C:\Program Files\Winlogbeat\ca.crt` 경로에 저장합니다.
-   - 저장 후 파일을 열어 줄바꿈이 온전하게 유지됐는지 반드시 확인하세요.
+   - 메모장 열 때 관리자 권한으로 열었는지 확인해주세요.
   
 ## 3️⃣ winlogbeat.yml 설정
 `C:\Program Files\Winlogbeat\winlogbeat.yml` 파일을 열어, 아래 내용만 포함되도록 수정합니다:
