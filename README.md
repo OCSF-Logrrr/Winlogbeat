@@ -33,7 +33,7 @@ winlogbeat.event_logs:            # Winlogbeat에서 수집할 로그 종류
   - name: Security
 
 output.logstash:
-  hosts: ["Logstash 서버 IP:5044"] # 수정해서 사용 !   
+  hosts: ["Logstash 서버 IP:5044"] # ❗❗ 반드시 수정하세요: 실제 Logstash IP로 변경 필요 ❗❗
   ssl.enabled: true               # TLS 사용
   ssl.certificate_authorities:    # CA 인증서 경로
     - "C:/Program Files/Winlogbeat/ca.crt"
