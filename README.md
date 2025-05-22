@@ -26,14 +26,14 @@
 ## 3️⃣ winlogbeat.yml 설정
 `C:\Program Files\Winlogbeat\winlogbeat.yml` 파일을 열어, 아래 내용만 포함되도록 수정합니다:
 ```
-winlogbeat.event_logs:
+winlogbeat.event_logs:            # Winlogbeat에서 수집할 로그 종류
   - name: Application
     ignore_older: 72h
   - name: System
   - name: Security
 
 output.logstash:
-  hosts: ["192.168.0.58:5044"]    # Logstash 서버 IP:5044 -> 수정필요
+  hosts: ["Logstash 서버 IP:5044"] # 수정해서 사용 !   
   ssl.enabled: true               # TLS 사용
   ssl.certificate_authorities:    # CA 인증서 경로
     - "C:/Program Files/Winlogbeat/ca.crt"
@@ -61,8 +61,8 @@ Get-Service winlogbeat
 
 ## 5️⃣ Logstash 재시작 (Docker 환경)
 ```
-docker-compose restart logstash
-docker-compose logs -f logstash
+docker restart basic-elk-logstash-1
+docker logs -f basic-elk-logstash-1
 ```
 
 ## 6️⃣ Kibana에서 수집 확인
