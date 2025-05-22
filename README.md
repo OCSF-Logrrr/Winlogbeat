@@ -1,4 +1,4 @@
-# 📥 Winlogbeat 8.6.2 설치 및 설정 가이드 (Windows)
+# 📥 Winlogbeat 8.6.2 설치 및 Logstash 연동 가이드 (Windows)
 
 이 문서는 Windows 환경에서 Winlogbeat 8.6.2를 설치하고, Logstash로 로그를 전송하는 방법을 설명합니다.
 
