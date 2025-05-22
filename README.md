@@ -38,6 +38,7 @@ output.logstash:
   ssl.certificate_authorities:    # CA 인증서 경로
     - "C:/Program Files/Winlogbeat/ca.crt"
 ```
+> 💡 YAML은 들여쓰기에 민감합니다. 반드시 **스페이스(공백)** 만 사용할 것!
 
 ## 4️⃣ Winlogbeat 서비스 등록 & 자동 실행
 관리자 권한 PowerShell에서 아래 명령을 순서대로 실행합니다:
@@ -58,6 +59,7 @@ Start-Service winlogbeat
 # 상태 확인
 Get-Service winlogbeat
 ```
+🖼️ PowerShell에서 Winlogbeat 서비스 시작 후 상태 확인 결과
 ![image](https://github.com/user-attachments/assets/18f9881a-2aec-47af-973a-38021d03b8e4)
 
 ## ❗ 설치 중 오류 발생 시 대처법
