@@ -58,6 +58,33 @@ Start-Service winlogbeat
 # 상태 확인
 Get-Service winlogbeat
 ```
+![image](https://github.com/user-attachments/assets/18f9881a-2aec-47af-973a-38021d03b8e4)
+
+## ❗ 설치 중 오류 발생 시 대처법
+![image](https://github.com/user-attachments/assets/7527f6f2-0b6b-415d-9682-69156ef26547)
+
+⚠️ 오류 발생 이유 : 
+Powershell 실행 정책 때문에 발생한 것으로, 기본적으로 Powershell에서 .ps1 스크립트 실행을 차단하고 있기 때문에 발생
+
+✅ 해결 방법 :
+```
+Set-ExecutionPolicy RemoteSigned
+입력 후 Y 또는 A 입력
+```
+---
+
+![image](https://github.com/user-attachments/assets/c6dfb100-4f0d-4ecc-a529-8c75743de8a3)
+
+⚠️ 오류 발생 이유 : 
+- PowerShell에서 디지털 서명되지 않은 스크립트를 실행하지 못하게 막는 정책 때문에 발생
+
+- RemoteSigned 정책은 로컬에서 만든 스크립트는 허용하지만, 인터넷에서 다운로드한 파일은 서명되지 않으면 차단
+
+✅ 해결 방법 : 
+Unblock-File 명령어로 잠금 해제
+```
+Unblock-File -Path "C:\경로\스크립트이름.ps1"
+```
 
 ## 5️⃣ Logstash 재시작 (Docker 환경)
 ```
